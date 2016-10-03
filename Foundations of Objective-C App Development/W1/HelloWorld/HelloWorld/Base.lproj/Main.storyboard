@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5G-cb-7Hu">
+                                <rect key="frame" x="128" y="286" width="64" height="30"/>
+                                <state key="normal" title="Click Me!"/>
+                                <connections>
+                                    <action selector="testButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ISt-8z-xAu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello, Everybody!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPe-OE-95k">
+                                <rect key="frame" x="93" y="196" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R5G-cb-7Hu" firstAttribute="top" secondItem="QPe-OE-95k" secondAttribute="bottom" constant="50" id="UVg-y3-xan"/>
+                            <constraint firstItem="R5G-cb-7Hu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gg7-wm-5ho"/>
+                            <constraint firstItem="QPe-OE-95k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i9p-hx-e80"/>
+                            <constraint firstItem="R5G-cb-7Hu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="veI-wI-nd9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testLabel" destination="QPe-OE-95k" id="MVZ-6V-brf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202.66666666666666" y="289.20666666666665"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9LJ-q3-w4R">
+                                <rect key="frame" x="0.0" y="199" width="320" height="29"/>
+                                <segments>
+                                    <segment title="&lt;kilometers&gt;"/>
+                                    <segment title="&lt;feet&gt;"/>
+                                    <segment title="&lt;inches&gt;"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c8Z-uf-5nC">
+                                <rect key="frame" x="12" y="147" width="191" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wd-gQ-PAl">
+                                <rect key="frame" x="130" y="235" width="61" height="30"/>
+                                <state key="normal" title="update"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ih-NL-QCg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Update for the Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqn-pg-SZy">
+                                <rect key="frame" x="53" y="273" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="in &lt;miles&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQS-ew-B1V">
+                                <rect key="frame" x="217" y="156" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lqn-pg-SZy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7sf-AW-dSf"/>
+                            <constraint firstItem="lQS-ew-B1V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="101.5" id="Mze-Vn-xa3"/>
+                            <constraint firstItem="9LJ-q3-w4R" firstAttribute="top" secondItem="lQS-ew-B1V" secondAttribute="bottom" constant="22" id="PM1-wM-IiB"/>
+                            <constraint firstItem="9LJ-q3-w4R" firstAttribute="top" secondItem="c8Z-uf-5nC" secondAttribute="bottom" constant="22" id="SO7-Ny-RNW"/>
+                            <constraint firstItem="lQS-ew-B1V" firstAttribute="leading" secondItem="c8Z-uf-5nC" secondAttribute="trailing" constant="14" id="TzE-AE-kGd"/>
+                            <constraint firstItem="5Wd-gQ-PAl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YhT-C2-5Yg"/>
+                            <constraint firstItem="9LJ-q3-w4R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aef-rN-Dut"/>
+                            <constraint firstItem="lqn-pg-SZy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f9C-3a-1vK"/>
+                            <constraint firstItem="lqn-pg-SZy" firstAttribute="top" secondItem="5Wd-gQ-PAl" secondAttribute="bottom" constant="8" id="gLB-WE-Wo7"/>
+                            <constraint firstItem="c8Z-uf-5nC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-52.5" id="sSC-XW-Gv8"/>
+                            <constraint firstItem="5Wd-gQ-PAl" firstAttribute="top" secondItem="9LJ-q3-w4R" secondAttribute="bottom" constant="8" id="yxN-T4-bjD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="c8Z-uf-5nC" id="1w2-ir-deM"/>
+                        <outlet property="outputField" destination="lqn-pg-SZy" id="gct-K0-EyU"/>
+                        <outlet property="segementController" destination="9LJ-q3-w4R" id="FJp-Cs-TIc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="289"/>
+        </scene>
+    </scenes>
+</document>
