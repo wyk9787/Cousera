@@ -5,6 +5,7 @@ Course taken or taking on Cousera in computer science field.
 ##iOS Development for Creative Entrepreneurs##
 
 ###[Course1: Foundations of Objective C App development](https://www.coursera.org/learn/objective-c/home/welcome)###
+###[Course2: Network and Security in iOS Applications](https://www.coursera.org/learn/security/home/welcome)###
 
 ##Data Structures and Algorithms##
 
