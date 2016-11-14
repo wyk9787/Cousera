@@ -1,0 +1,10 @@
+# Use the file name mbox-short.txt as the file name
+n=0
+fname = raw_input("Enter file name: ")
+fh = open(fname)
+for line in fh:
+    if line.startswith("X-DSPAM-Confidence:") : 
+	  a=a+line
+	  n=n+1
+	  continue
+print "Average spam confidence:",a/n
