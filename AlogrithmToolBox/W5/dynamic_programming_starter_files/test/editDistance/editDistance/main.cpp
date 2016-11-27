@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -25,17 +26,18 @@ int min3 (int a, int b, int c){
 }
 
 int edit_distance(const string &str1, const string &str2) {
-    int m = str1.length();
-    int n = str2.length();
-    int d[m][n];
-
-    for(int i = 0; i <= m; i++)
-        for(int j = 0; j <= n; j++){
+    int n = str1.length();
+    int m = str2.length();
+    vector<vector<int>> d(n+1);
+    for(int i = 0; i <= n; i++)
+        d[i].resize(m+1);
+    for(int i = 0; i <= n; i++)
+        for(int j = 0; j <= m; j++){
             d[i][0] = i;
             d[0][j] = j;
         }
-    for (int j = 1; j <= n; j++){
-        for (int i = 1; i <= m; i++){
+    for (int j = 1; j <= m; j++){
+        for (int i = 1; i <= n; i++){
             int insertion = d[i][j-1] + 1;
             int deletion = d[i-1][j] + 1;
             int match = d[i-1][j-1];
@@ -46,7 +48,7 @@ int edit_distance(const string &str1, const string &str2) {
                 d[i][j] = min3(insertion, deletion, mismatch);
         }
     }
-    return d[m][n];
+    return d[n][m];
 }
 
 int main() {

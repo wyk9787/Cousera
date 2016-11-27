@@ -26,8 +26,14 @@
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYk-Xg-f5f">
                                 <items>
-                                    <barButtonItem title="Item" id="xq3-In-kUH"/>
+                                    <barButtonItem systemItem="action" id="xq3-In-kUH">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="showShareAction:" destination="BYZ-38-t0r" id="4gd-a7-KNn"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
+                                <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,6 +47,9 @@
                             <constraint firstItem="SYk-Xg-f5f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ybA-zP-ZrW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tweetTextView" destination="6BT-vb-evg" id="bPS-Cz-KFd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

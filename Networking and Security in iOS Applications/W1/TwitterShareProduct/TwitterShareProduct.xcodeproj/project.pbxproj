@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68548F8D1DEA6B2C001969BF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68548F8C1DEA6B2C001969BF /* Social.framework */; };
 		687376B91DE2D01C00A65036 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 687376B81DE2D01C00A65036 /* main.m */; };
 		687376BC1DE2D01C00A65036 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 687376BB1DE2D01C00A65036 /* AppDelegate.m */; };
 		687376BF1DE2D01C00A65036 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 687376BE1DE2D01C00A65036 /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68548F8C1DEA6B2C001969BF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		687376B41DE2D01C00A65036 /* TwitterShareProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterShareProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		687376B81DE2D01C00A65036 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		687376BA1DE2D01C00A65036 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68548F8D1DEA6B2C001969BF /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68548F8B1DEA6B2C001969BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68548F8C1DEA6B2C001969BF /* Social.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		687376AB1DE2D01C00A65036 = {
 			isa = PBXGroup;
 			children = (
 				687376B61DE2D01C00A65036 /* TwitterShareProduct */,
 				687376B51DE2D01C00A65036 /* Products */,
+				68548F8B1DEA6B2C001969BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -309,6 +321,7 @@
 				687376CD1DE2D01C00A65036 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
