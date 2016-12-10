@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68548F8D1DEA6B2C001969BF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68548F8C1DEA6B2C001969BF /* Social.framework */; };
 		687376B91DE2D01C00A65036 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 687376B81DE2D01C00A65036 /* main.m */; };
 		687376BC1DE2D01C00A65036 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 687376BB1DE2D01C00A65036 /* AppDelegate.m */; };
 		687376BF1DE2D01C00A65036 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 687376BE1DE2D01C00A65036 /* ViewController.m */; };
 		687376C21DE2D01C00A65036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687376C01DE2D01C00A65036 /* Main.storyboard */; };
 		687376C41DE2D01C00A65036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687376C31DE2D01C00A65036 /* Assets.xcassets */; };
 		687376C71DE2D01C00A65036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687376C51DE2D01C00A65036 /* LaunchScreen.storyboard */; };
+		68C4BBDA1DFC9EE9003170E2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68548F8C1DEA6B2C001969BF /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68548F8D1DEA6B2C001969BF /* Social.framework in Frameworks */,
+				68C4BBDA1DFC9EE9003170E2 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
