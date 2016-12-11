@@ -32,7 +32,7 @@
 }
 
 - (void) showAlertMessages:(NSString *) myMessage{
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"TweetShare" message:myMessage preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Social Share" message:myMessage preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:alertController animated:YES completion:nil];
 }
@@ -40,7 +40,7 @@
     if ([self.tweetTextView isFirstResponder])
         [self.tweetTextView resignFirstResponder];
     
-    UIAlertController *actionController = [UIAlertController alertControllerWithTitle:@"" message:@ "Tweet your note" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *actionController = [UIAlertController alertControllerWithTitle:@"Share" message:@ "" preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
     
@@ -60,9 +60,21 @@
                                       else{
                                           [self showAlertMessages: @"Please sign in tweeter before you tweet"];
                                       }
-                                  }]; 
+                                  }];
+    UIAlertAction *facebookAction = [UIAlertAction actionWithTitle:@"Facebook" style:UIAlertActionStyleDefault handler:
+                                  ^(UIAlertAction *action){
+                                      if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]){
+                                          SLComposeViewController *facebookVC  = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+                                          [facebookVC setInitialText:self.tweetTextView.text];
+                                          [self presentViewController:facebookVC animated:YES completion:nil];
+                                      }
+                                      else{
+                                          [self showAlertMessages: @"Please sign in facebook before you tweet"];
+                                      }
+                                  }];
     
     [actionController addAction:tweetAction];
+    [actionController addAction:facebookAction];
     [actionController addAction:cancelAction];
     
     [self presentViewController:actionController animated:YES completion:Nil];
