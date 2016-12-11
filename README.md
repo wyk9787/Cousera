@@ -1,6 +1,6 @@
 # Cousera
 
-Course taken or taking on Cousera in computer science field.
+Course taken or taking on Cousera related to computer science.
 
 ##iOS Development for Creative Entrepreneurs##
 
