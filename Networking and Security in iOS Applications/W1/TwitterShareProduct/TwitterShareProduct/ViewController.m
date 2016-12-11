@@ -40,6 +40,9 @@
     if ([self.tweetTextView isFirstResponder])
         [self.tweetTextView resignFirstResponder];
     
+    UIActivityViewController *moreVC = [[UIActivityViewController alloc]initWithActivityItems:@[self.tweetTextView.text] applicationActivities:nil];
+    [self presentViewController:moreVC animated:YES completion:nil];
+    
     UIAlertController *actionController = [UIAlertController alertControllerWithTitle:@"Share" message:@ "" preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
@@ -73,11 +76,18 @@
                                       }
                                   }];
     
+    UIAlertAction *moreAction = [UIAlertAction actionWithTitle:@"More" style:UIAlertActionStyleDefault handler:
+                                 ^(UIAlertAction *action){
+                                     UIActivityViewController *moreVC = [[UIActivityViewController alloc]initWithActivityItems:@[self.tweetTextView.text] applicationActivities:nil];
+                                     [self presentViewController:moreVC animated:YES completion:nil];
+                                 }];
+    
     [actionController addAction:tweetAction];
     [actionController addAction:facebookAction];
+    [actionController addAction:moreAction];
     [actionController addAction:cancelAction];
     
-    [self presentViewController:actionController animated:YES completion:Nil];
+//    [self presentViewController:actionController animated:YES completion:Nil];
 }
 
 - (void) configureTweetTextView{

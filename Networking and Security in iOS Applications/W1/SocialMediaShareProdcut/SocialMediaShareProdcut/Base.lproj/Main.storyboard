@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90k-6Y-Pz3">
+                                <items>
+                                    <barButtonItem systemItem="action" id="8xQ-ov-Xa1">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="shareAction1:" destination="BYZ-38-t0r" id="o42-JW-4qg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="action" id="siY-n9-iE7">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="shareAction2:" destination="BYZ-38-t0r" id="DMB-tz-cgT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="action" id="Wo2-pE-9Xj">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="shareAction3:" destination="BYZ-38-t0r" id="syt-KV-BVO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="action" id="isT-km-Sd4">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="shareAction4:" destination="BYZ-38-t0r" id="vef-r2-EJf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post to your facebook!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ijN-ou-Z3X">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="IAL-mx-qCR"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Seek more options!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K97-uN-zkB">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tweet to your twitter!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JU4-m6-J7w">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="UQ8-c5-hBA"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K97-uN-zkB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2k8-Q8-cDi"/>
+                            <constraint firstItem="ijN-ou-Z3X" firstAttribute="leading" secondItem="K97-uN-zkB" secondAttribute="leading" id="95K-tN-er2"/>
+                            <constraint firstAttribute="trailing" secondItem="K97-uN-zkB" secondAttribute="trailing" id="Eij-pY-q1x"/>
+                            <constraint firstItem="ijN-ou-Z3X" firstAttribute="leading" secondItem="JU4-m6-J7w" secondAttribute="leading" id="MB1-yo-uhW"/>
+                            <constraint firstItem="ijN-ou-Z3X" firstAttribute="trailing" secondItem="K97-uN-zkB" secondAttribute="trailing" id="Sbj-Er-sHQ"/>
+                            <constraint firstItem="K97-uN-zkB" firstAttribute="top" secondItem="ijN-ou-Z3X" secondAttribute="bottom" id="X0J-qN-RFw"/>
+                            <constraint firstItem="ijN-ou-Z3X" firstAttribute="trailing" secondItem="JU4-m6-J7w" secondAttribute="trailing" id="Xdn-v9-akx"/>
+                            <constraint firstItem="JU4-m6-J7w" firstAttribute="trailing" secondItem="90k-6Y-Pz3" secondAttribute="trailing" id="ZsK-CQ-0R0"/>
+                            <constraint firstItem="K97-uN-zkB" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="cGD-dT-Onu"/>
+                            <constraint firstItem="ijN-ou-Z3X" firstAttribute="top" secondItem="JU4-m6-J7w" secondAttribute="bottom" id="hID-aI-1nI"/>
+                            <constraint firstItem="JU4-m6-J7w" firstAttribute="top" secondItem="90k-6Y-Pz3" secondAttribute="bottom" id="jQC-9n-efo"/>
+                            <constraint firstItem="JU4-m6-J7w" firstAttribute="leading" secondItem="90k-6Y-Pz3" secondAttribute="leading" id="tWv-c9-QRW"/>
+                            <constraint firstItem="90k-6Y-Pz3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zDp-QC-TK8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView1" destination="JU4-m6-J7w" id="irY-B2-8Y8"/>
+                        <outlet property="textView2" destination="ijN-ou-Z3X" id="I9H-6V-456"/>
+                        <outlet property="textView3" destination="K97-uN-zkB" id="r1N-KR-IQo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
