@@ -42,7 +42,7 @@ int edit_distance(const string &str1, const string &str2) {
             int deletion = d[i-1][j] + 1;
             int match = d[i-1][j-1];
             int mismatch = d[i-1][j-1] + 1;
-            if (str1[i] == str2[j])
+            if (str1[i-1] == str2[j-1])
                 d[i][j] = min3(insertion, deletion, match);
             else
                 d[i][j] = min3(insertion, deletion, mismatch);
