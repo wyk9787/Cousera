@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s70-5G-CPY">
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ncD-PE-QLE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTM-b3-XvN">
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rgl-q4-0ec"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0075.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lFL-5G-c0B"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxK-B0-Hjf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7MZ-Qf-iac"/>
+                                </constraints>
+                                <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="logininButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bxl-J2-wyl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lFL-5G-c0B" firstAttribute="top" secondItem="IxK-B0-Hjf" secondAttribute="bottom" constant="84" id="6qU-ad-J30"/>
+                            <constraint firstItem="IxK-B0-Hjf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9FF-Qy-lNo"/>
+                            <constraint firstItem="s70-5G-CPY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="AbI-OA-vyu"/>
+                            <constraint firstAttribute="trailing" secondItem="lFL-5G-c0B" secondAttribute="trailing" id="Qgh-9z-zfY"/>
+                            <constraint firstItem="rTM-b3-XvN" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="R1C-vA-iaB"/>
+                            <constraint firstItem="IxK-B0-Hjf" firstAttribute="top" secondItem="s70-5G-CPY" secondAttribute="top" id="byV-05-SDi"/>
+                            <constraint firstItem="lFL-5G-c0B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cqp-Wk-WJQ"/>
+                            <constraint firstItem="s70-5G-CPY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hQN-1s-qHj"/>
+                            <constraint firstItem="lFL-5G-c0B" firstAttribute="centerX" secondItem="rTM-b3-XvN" secondAttribute="centerX" id="xYR-KJ-ECg"/>
+                            <constraint firstItem="lFL-5G-c0B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yFg-DF-b7n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="lFL-5G-c0B" id="Ez4-9D-qm1"/>
+                        <outlet property="loginButton" destination="IxK-B0-Hjf" id="nOh-0X-Z1F"/>
+                        <outlet property="logoutButton" destination="s70-5G-CPY" id="97S-4M-eNo"/>
+                        <outlet property="refreshButton" destination="rTM-b3-XvN" id="vq0-sz-Kxm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_0075.jpg" width="5472" height="3648"/>
+    </resources>
+</document>
