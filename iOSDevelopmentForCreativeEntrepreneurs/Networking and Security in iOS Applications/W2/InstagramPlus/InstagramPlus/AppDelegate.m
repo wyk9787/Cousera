@@ -31,8 +31,8 @@
     return YES;
 }
 
-- (BOOL) application:(UIApplication *)app oepnURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-    NSLog(@"Succeed!");
+- (BOOL) application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*,id> *)options {
+    NSLog(@"We received a callback");
     if([self.incomingRedirect containsString:[url scheme]] && [self.incomingRedirect containsString:[url host]]){
         NSURL *constructed = [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", self.outgoingRedirect, [url query]]];
         return [[NXOAuth2AccountStore sharedStore] handleRedirectURL:constructed];

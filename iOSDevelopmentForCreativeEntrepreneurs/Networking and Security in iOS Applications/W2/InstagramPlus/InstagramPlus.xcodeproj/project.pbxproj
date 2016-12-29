@@ -21,6 +21,7 @@
 		0C9079F44133A1244E0A7A09 /* libPods-InstagramPlus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InstagramPlus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607C80C63051938546364706 /* Pods-InstagramPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramPlus/Pods-InstagramPlus.release.xcconfig"; sourceTree = "<group>"; };
 		685C47221DFF956B003855CD /* IMG_0075.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0075.jpg; sourceTree = "<group>"; };
+		68A019561E1594BA002A43A9 /* InstagramPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstagramPlus.entitlements; sourceTree = "<group>"; };
 		68C4BC431DFF8C0B003170E2 /* InstagramPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C4BC471DFF8C0B003170E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68C4BC491DFF8C0B003170E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		68C4BC451DFF8C0B003170E2 /* InstagramPlus */ = {
 			isa = PBXGroup;
 			children = (
+				68A019561E1594BA002A43A9 /* InstagramPlus.entitlements */,
 				68C4BC491DFF8C0B003170E2 /* AppDelegate.h */,
 				68C4BC4A1DFF8C0B003170E2 /* AppDelegate.m */,
 				68C4BC4C1DFF8C0B003170E2 /* ViewController.h */,
@@ -140,7 +142,13 @@
 				TargetAttributes = {
 					68C4BC421DFF8C0B003170E2 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = WWHBBQ8UC6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -352,6 +360,8 @@
 			baseConfigurationReference = 7FBF9B4C61C1E91EBD3256C6 /* Pods-InstagramPlus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = InstagramPlus/InstagramPlus.entitlements;
+				DEVELOPMENT_TEAM = WWHBBQ8UC6;
 				INFOPLIST_FILE = InstagramPlus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -365,6 +375,8 @@
 			baseConfigurationReference = 607C80C63051938546364706 /* Pods-InstagramPlus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = InstagramPlus/InstagramPlus.entitlements;
+				DEVELOPMENT_TEAM = WWHBBQ8UC6;
 				INFOPLIST_FILE = InstagramPlus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

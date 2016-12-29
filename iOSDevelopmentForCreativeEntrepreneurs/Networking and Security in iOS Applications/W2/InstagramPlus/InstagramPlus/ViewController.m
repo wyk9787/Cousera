@@ -18,6 +18,20 @@
 @end
 
 @implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    self.logoutButton.enabled = false;
+    self.refreshButton.enabled = false;
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (IBAction)logininButtonPressed:(id)sender {
     [[NXOAuth2AccountStore sharedStore] requestAccessToAccountWithType:@"Instagram"];
     self.logoutButton.enabled = true;
@@ -95,18 +109,7 @@
     }] resume];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.logoutButton.enabled = false;
-    self.refreshButton.enabled = false;
-}
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
