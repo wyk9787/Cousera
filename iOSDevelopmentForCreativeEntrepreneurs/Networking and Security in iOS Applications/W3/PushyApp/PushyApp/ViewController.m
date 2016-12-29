@@ -20,7 +20,7 @@
 
 - (IBAction)scheduleTapped:(id)sender {
     [self requestPermissionToNotify];
-    [self creatANotification:5];
+    [self creatANotification:15];
 }
 
 - (void) requestPermissionToNotify{

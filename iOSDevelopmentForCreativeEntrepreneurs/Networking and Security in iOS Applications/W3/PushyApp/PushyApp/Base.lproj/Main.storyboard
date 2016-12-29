@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyC-cA-KPi">
-                                <state key="normal" title="Schedule an alert in 5 seconds"/>
+                                <state key="normal" title="Schedule an alert in 15 seconds"/>
                                 <connections>
                                     <action selector="scheduleTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hjn-9Q-zH6"/>
                                 </connections>
