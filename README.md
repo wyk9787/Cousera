@@ -10,6 +10,7 @@ Course taken or taking on Cousera related to computer science.
 ##Data Structures and Algorithms##
 
 ###[Course1: Algorithmic Toolbox](https://www.coursera.org/learn/algorithmic-toolbox/home/welcome)###
+###[Course2: Data Structures](https://www.coursera.org/learn/data-structures/home/welcome)###
 
 ##Other Courses##
 
