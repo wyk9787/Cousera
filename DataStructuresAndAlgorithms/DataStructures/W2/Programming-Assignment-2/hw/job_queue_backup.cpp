@@ -4,10 +4,6 @@
 #include <queue>
 #include <functional>
 
-using std::vector;
-using std::cin;
-using std::cout;
-
 using namespace std;
 
 struct i_d{
@@ -23,7 +19,7 @@ public:
         if (a.free > b.free)
             return true;
         else if (a.free == b.free)
-            return a.id > b.id;
+            return a.id >= b.id;
         else
             return false;
     }
@@ -62,18 +58,14 @@ private:
             u.free = 0;
             q.push(u);
         }
-        long long j = 0;
-        for(long long i = 0; i < jobs_.size(); i++){
-            while(q.top().free == i){
-                assigned_workers_.push_back(q.top().id);
-                start_times_.push_back(i);
-                unit temp;
-                temp.id = q.top().id;
-                temp.free = i + jobs_[j];
-                q.pop();
-                q.push(temp);
-                j++;
-            }
+        for(long long i = 0; i <= jobs_.size(); i++){
+            assigned_workers_.push_back(q.top().id);
+            start_times_.push_back(q.top().free);
+            unit temp;
+            temp.id = q.top().id;
+            temp.free = q.top().free+ jobs_[i];
+            q.pop();
+            q.push(temp);
         }
     }
 
