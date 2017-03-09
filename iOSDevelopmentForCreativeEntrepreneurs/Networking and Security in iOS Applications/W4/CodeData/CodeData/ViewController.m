@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  CoreData
+//  CodeData
 //
-//  Created by Garrett Wang on 1/3/17.
+//  Created by Garrett Wang on 3/9/17.
 //  Copyright © 2017 Garrett Wang. All rights reserved.
 //
 
@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.appDelegate = [[UIApplication sharedApplication] delegate];
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
 

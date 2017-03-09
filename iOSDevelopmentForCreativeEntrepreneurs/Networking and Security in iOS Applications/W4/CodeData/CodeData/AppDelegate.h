@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  CoreData
+//  CodeData
 //
-//  Created by Garrett Wang on 1/3/17.
+//  Created by Garrett Wang on 3/9/17.
 //  Copyright © 2017 Garrett Wang. All rights reserved.
 //
 

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  CoreData
+//  CodeData
 //
-//  Created by Garrett Wang on 1/3/17.
+//  Created by Garrett Wang on 3/9/17.
 //  Copyright © 2017 Garrett Wang. All rights reserved.
 //
 
@@ -16,12 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-//    [self managedObjectModel];
-    [self persistentContainer];
-    
+    [ self persistentContainer ];
     NSManagedObjectContext *moc = self.persistentContainer.viewContext;
-    NSAssert(moc != nil, @"Unable to create Managed Object Context");
+    NSAssert(moc!=nil, @"rx:didFinishLaunchingWithOptions: unable to create managed object context" );
+    
     
     return YES;
 }
@@ -35,7 +33,7 @@
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
-            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"CoreData"];
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"CodeData"];
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 if (error != nil) {
                     // Replace this implementation with code to handle the error appropriately.
