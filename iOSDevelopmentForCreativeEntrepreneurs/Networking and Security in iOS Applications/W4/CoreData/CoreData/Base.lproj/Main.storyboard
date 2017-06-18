@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPl-b2-BsP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="307" id="2TC-rb-eui"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZ0-m3-Fb6">
+                                <state key="normal" title="Add a Chore"/>
+                                <connections>
+                                    <action selector="choreTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YMB-7r-25j"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z8y-As-AOn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="oDm-3J-J3h"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iie-n9-bhF">
+                                <frame key="frameInset" minX="165" minY="267" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqD-tB-k8a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bZ0-m3-Fb6" firstAttribute="leading" secondItem="zPl-b2-BsP" secondAttribute="leading" id="NFZ-00-tb3"/>
+                            <constraint firstAttribute="trailing" secondItem="zPl-b2-BsP" secondAttribute="trailing" id="O3A-oR-Ko7"/>
+                            <constraint firstItem="Z8y-As-AOn" firstAttribute="trailing" secondItem="bZ0-m3-Fb6" secondAttribute="trailing" id="XGD-d7-x3R"/>
+                            <constraint firstItem="Z8y-As-AOn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bAw-Nq-ID3"/>
+                            <constraint firstItem="Z8y-As-AOn" firstAttribute="leading" secondItem="bZ0-m3-Fb6" secondAttribute="leading" id="eyV-hi-XWO"/>
+                            <constraint firstItem="bZ0-m3-Fb6" firstAttribute="top" secondItem="Z8y-As-AOn" secondAttribute="bottom" constant="24" id="fcM-wk-6vc"/>
+                            <constraint firstItem="zPl-b2-BsP" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="k3F-iA-a1b"/>
+                            <constraint firstItem="Z8y-As-AOn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="nwp-E1-HIn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="choreField" destination="Z8y-As-AOn" id="Xf6-06-ZCr"/>
+                        <outlet property="choreListLabel" destination="zPl-b2-BsP" id="Ujg-rm-xlI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
