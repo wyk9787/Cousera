@@ -17,7 +17,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     [self persistentContainer];
     NSManagedObjectContext *moc = self.persistentContainer.viewContext;
     NSAssert(moc!=nil, @"Unable to create manage object");
