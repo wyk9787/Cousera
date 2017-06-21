@@ -13,7 +13,7 @@ Course taken or taking on Cousera related to computer science.
 ### [Course1: Algorithmic Toolbox](https://www.coursera.org/learn/algorithmic-toolbox/home/welcome) ###
 ### [Course2: Data Structures](https://www.coursera.org/learn/data-structures/home/welcome) ###
 
-## Other Courses##
+## Other Courses ##
 
 ### [Machine Learning](https://www.coursera.org/learn/machine-learning/home/welcome) ###
 ### [Programming for Everybody (Getting Started with Python)](https://www.coursera.org/learn/python) ###
