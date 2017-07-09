@@ -14,7 +14,7 @@
 # 
 # The columns are organized as # of Summer games, Summer medals, # of Winter games, Winter medals, total # number of games, total # of medals. Use this dataset to answer the questions below.
 
-# In[2]:
+# In[4]:
 
 import pandas as pd
 
@@ -131,13 +131,13 @@ answer_four()
 # 
 # *This function should return a single string value.*
 
-# In[139]:
+# In[5]:
 
 census_df = pd.read_csv('census.csv')
 census_df.head()
 
 
-# In[103]:
+# In[2]:
 
 def answer_five():
     df_filtered = census_df[census_df['SUMLEV'] == 50]
@@ -205,8 +205,29 @@ answer_seven()
 # 
 # *This function should return a 5x2 DataFrame with the columns = ['STNAME', 'CTYNAME'] and the same index ID as the census_df (sorted ascending by index).*
 
-# In[ ]:
+# In[76]:
 
 def answer_eight():
-    return "YOUR ANSWER HERE"
+    df_filtered = census_df[census_df['SUMLEV'] == 50]
+    df_index = df_filtered.reset_index()
+    
+    ans_df = pd.DataFrame()
+    ans_df['STNAME'] = ''
+    ans_df['CTYNAME'] = ''
+
+    for index in df_index['index']:
+        region = df_index[df_index['index'] == index]['REGION'].iloc[0]
+        county_name = df_index[df_index['index'] == index]['CTYNAME'].iloc[0]
+        pop2015 = df_index[df_index['index'] == index]['POPESTIMATE2015'].iloc[0]
+        pop2014 = df_index[df_index['index'] == index]['POPESTIMATE2014'].iloc[0]
+        pop_diff = pop2015-pop2014
+        if((region == 1 or region == 2) and county_name.startswith('Washington') and pop_diff > 0):
+            index = df_index[df_index['index'] == index]['index'].iloc[0]
+            state_name = df_index[df_index['index'] == index]['STNAME'].iloc[0]
+            data = pd.DataFrame({'STNAME' : [state_name], 'CTYNAME' : [county_name]}, index=[index])
+            ans_df = ans_df.append(data)
+    ans_df = ans_df[['STNAME', 'CTYNAME']]        
+    return ans_df
+
+answer_eight()
 
