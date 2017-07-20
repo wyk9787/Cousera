@@ -38,9 +38,8 @@ names_ids = df.index.str.split('\s\(') # split the index by '('
 
 df.index = names_ids.str[0] # the [0] element is the country name (new index)
 df['ID'] = names_ids.str[1].str[:3] # the [1] element is the abbreviation or ID (take first 3 characters from that)
-print("Input successfully\n")
 df = df.drop('Totals')
-print df.head()
+
 
 
 # ### Question 0 (Example)
@@ -61,7 +60,7 @@ def answer_zero():
 # You can examine what your function returns by calling it in the cell. If you have questions
 # about the assignment formats, check out the discussion forums for any FAQs
 answer_zero()
-print("Answer zero successfully\n")
+
 
 # ### Question 1
 # Which country has won the most gold medals in summer games?
